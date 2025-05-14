@@ -1,7 +1,7 @@
 # API Rest SQL
 Ejemplo de una API REST con SQL DB + Docker
 
-# Clonar repo
+# Clonar repositorio
 ## Opción 1 (Manual)
  1.- Hacer click en el botón __CODE <>__  
  2.- Hacer click en el botón __Download ZIP__   
@@ -13,26 +13,45 @@ Ejecutar
   git clone https://github.com/mevangelista-alvarado/api_rest_sql.git 
 ```
 
-# Docker
+# Deploy in Render
+## Crear PosgreSQL
+Pendiente
+
+## Deploy in Web
+Pendiente
+
+## Último paso
+Correr el siguiente [Google Colab](https://colab.research.google.com/drive/19I_bV_-F8o3TeTfp-95rdQWpYXNohYdA?usp=sharing)
+
+# Entorno Local (Docker)
 ## Primera Vez
-1.- Ejecutar en terminal (en la carpeta donde este el archivo `docker-compose.yml`)  
+1.- Crear un archivo `.env` (Tome como referencia el archivo `.env_example` y no olvide actulizar los valores)  
+
+2a.- Abrir una terminal (en la carpeta donde este el archivo `docker-compose.yml`)   
+3a.- Ejecutar  
 ```
   docker-compose up --build
-```
-2.- Abrir un terminal nueva y ejecutar en terminal (en la carpeta donde este el archivo `docker-compose.yml` & `init_db.py`)  
+```  
+
+2b.- Abrir una terminal nueva (en la carpeta donde este el archivo `docker-compose.yml` & `init_db.py`)
+3b.- Ejecutar  
 ```
   docker-compose exec web python init_db.py
 ```
-3.- Visitar en su navegador [http://localhost:5050/](http://localhost:5050/)  
+
+4.- Visitar en su navegador [http://localhost:5050/](http://localhost:5050/)  
 
 ## Si NO es la primera vez
-1.- Ejecutar en terminal (en la carpeta donde este el archivo `docker-compose.yml`)
+1.- Abrir una terminal (en la carpeta donde este el archivo `docker-compose.yml`)   
+2.- Ejecutar
 ```
   docker-compose up
 ```
-2.- Visitar en su navegador [http://localhost:5050/](http://localhost:5050/)
+3.- Visitar en su navegador [http://localhost:5050/](http://localhost:5050/)
 
-# PostgreSQL
+
+# Miscelania 
+## Probar PostgreSQL
 Para probar PostgreSQL, vaya a Docker Desktop y seleccione (dar click) el servicio de postgres (db-1) 
 
 <img width="574" alt="image" src="https://github.com/user-attachments/assets/96dce66f-5f5c-45fd-ac78-36c4c1dfa91d" />
@@ -49,7 +68,7 @@ psql -U postgres
 
 Y ya estará dentro de la terminal de Postgres
 
-## Consultado el contenido de una base de datos
+### Consultado el contenido de una base de datos
 
 Para listar bases de datos, ejecute
 ```
